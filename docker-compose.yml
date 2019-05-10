@@ -1,0 +1,24 @@
+version: '3'
+services:
+  node:
+    env_file: .env
+    container_name: node
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/frontend/node_modules
+    build:
+      context: .
+      args:
+        - port=${PORT}
+    ports:
+      - '${PORT}:${PORT}'
+    # entrypoint:
+    #   - npm
+    #   - install
+    #   - start
+
+    # for watching files
+    environment:
+      CHOKIDAR_USEPOLLING: 'true'
+      CHKODIRA_INTERVAL: 300

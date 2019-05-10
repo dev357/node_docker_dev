@@ -1,0 +1,20 @@
+# Git
+.git
+.gitignore
+
+# Editor
+.vscode
+
+# Build step outputs
+build
+
+# Docker configuration
+Dockerfile
+Makefile
+docker-compose.yml
+
+# NPM dependencies
+node_modules
+
+# Other
+.editorconfig
